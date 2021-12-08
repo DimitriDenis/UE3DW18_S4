@@ -67,14 +67,4 @@ class HomeController {
         );
     }
 
-    public function indexAction($page = 1)
-{
-    // ... get posts from DB...
-
-    $limit = 5;
-    $maxPages = ceil($paginator->count() / $limit);
-    $thisPage = $page;
-    // Pass through the 3 above variables to calculate pages in twig
-    return $this->render('admin.html.twig', compact('categories', 'maxPages', 'thisPage'));
-}
 }
