@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>watson</title>
+        <description>Flux Rss</description>
+        <link>{{ path('rss') }}</link>
+        {% for link in links %}
+        <item>
+            <title>{{ link.title }}</title>
+            <description>{{ link.desc }}</description>
+            <link> {{ path('link', { 'id': link.id }) }}</link>
+        </item>
+        {% endfor %}
+    </channel>
+</rss>

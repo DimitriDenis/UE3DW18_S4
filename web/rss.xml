@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<channel>
+  <item>
+    <title>Linux</title>
+    <link>https://www.linux.org</link>
+    <description>Linux ou GNU/Linux est une famille de systèmes d'exploitation open source</description>
+  </item>
+  <item>
+    <title>WordPress</title>
+    <link>https://wordpress.com/fr/</link>
+    <description>Système de gestion de contenu gratuit, libre et open-source</description>
+  </item>
+  <item>
+    <title>Vagrant</title>
+    <link>https://www.vagrantup.com/</link>
+    <description>Logiciel libre et open-source pour la création et la configuration des environnements de développement virtuel</description>
+  </item>
+  <item>
+    <title>Root-me</title>
+    <link>https://www.root-me.org/</link>
+    <description>Une plateforme réaliste pour tester vos compétences en hacking.</description>
+  </item>
+  <item>
+    <title>Coingecko</title>
+    <link>https://www.coingecko.com/fr</link>
+    <description>Apercu et cours des marchés de la cryptomonnaie</description>
+  </item>
+  <item>
+    <title>LDLC</title>
+    <link>https://www.ldlc.com/</link>
+    <description>Boutique en ligne de matériel informatique</description>
+  </item>
+  <item>
+    <title>Codeur</title>
+    <link>https://www.codeur.com/</link>
+    <description>Site de mise en relations entre freelances et clients pour des projets numériques</description>
+  </item>
+  <item>
+    <title>Brave</title>
+    <link>https://brave.com/fr/</link>
+    <description>Navigateur web open-source</description>
+  </item>
+  <item>
+    <title>Github</title>
+    <link>https://github.com/</link>
+    <description>service web d'hébergement et de gestion de développement de logiciels, utilisant le logiciel de gestion de versions Git</description>
+  </item>
+  <item>
+    <title>Unilim</title>
+    <link>https://biome.unilim.fr/</link>
+    <description>Site internet de l'Université de Limoges</description>
+  </item>
+  <item>
+    <title>Leboncoin</title>
+    <link>https://www.leboncoin.fr/</link>
+    <description>Site web de petites annonces</description>
+  </item>
+  <item>
+    <title>Monster</title>
+    <link>https://www.monster.fr/</link>
+    <description>Site d'offres d'emplois</description>
+  </item>
+  <item>
+    <title>Dockerhub</title>
+    <link>https://hub.docker.com/</link>
+    <description>Une librairie d'image container</description>
+  </item>
+  <item>
+    <title>Framasoft</title>
+    <link>https://framasoft.org/</link>
+    <description>Un réseau dédié à la promotion du « libre » en général et du logiciel libre en particulier.</description>
+  </item>
+  <item>
+    <title>Duck Duck Go</title>
+    <link>https://duckduckgo.com/</link>
+    <description>Le moteur de recherche qui ne trace pas ses utilisateurs.</description>
+  </item>
+</channel>
