@@ -76,7 +76,7 @@ $premiereEntree=($pageActuelle-1)*$messagesParPage; // On calcul la première en
  
 // La requête sql pour récupérer les messages de la page actuelle.
 $sql2 = "SELECT * FROM tl_liens ORDER BY id DESC LIMIT ";
-$retour_messages=mysqli_query($app, 'SELECT * FROM tl_liens ORDER BY id DESC LIMIT '.$premiereEntree.', '.$messagesParPage.'');
+$retour_messages=mysqli_query($app, 'SELECT * FROM tl_liens ORDER BY lien_id DESC LIMIT '.$premiereEntree.', '.$messagesParPage.'');
 
  
 while($donnees_messages=mysqli_fetch_assoc($retour_messages)) // On lit les entrées une à une grâce à une boucle
@@ -85,10 +85,10 @@ while($donnees_messages=mysqli_fetch_assoc($retour_messages)) // On lit les entr
      //De plus j'ajoute aussi un nl2br pour prendre en compte les sauts à la ligne dans le message.
      echo '<table width="400" border="0" align="center" cellpadding="0" cellspacing="0">
                 <tr>
-                     <td><strong>Ecrit par : '.$donnees_messages['pseudo'].'</strong></td>
+                     <td><strong>Ecrit par : '.$donnees_messages['lien_url'].'</strong></td>
                 </tr>
                 <tr>
-                     <td>'.nl2br($donnees_messages['message']).'</td>
+                     <td>'.nl2br($donnees_messages['lien_titre']).'</td>
                 </tr>
             </table><br /><br />';
     //J'ai rajouté des sauts à la ligne pour espacer les messages.   
@@ -104,7 +104,7 @@ for($i=1; $i<=$nombreDePages; $i++) //On fait notre boucle
      }    
      else //Sinon...
      {
-          echo ' <a href="index.php?page='.$i.'">'.$i.'</a> ';
+          echo ' <a href="rss.php?page='.$i.'">'.$i.'</a> ';
      }
 }
 echo '</p>';
