@@ -1,5 +1,7 @@
 body { 
-    padding-top: 100px; 
+    padding-top: 100px;
+    color:white;
+    background-color:#212429;
 }
 
 #logo{
@@ -27,13 +29,56 @@ body {
 .articleTitle:hover, .articleTitle:focus {
     text-decoration: none;
 }
-
 .adminTable {
     margin-top: 20px;
     margin-bottom: 20px;
+    color:black;
+}
+
+.well{
+    color:black;
+}
+
+.table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #ffffff;
+    color: black;
+
+}
+  
+.table td, .table th {
+    padding: 8px;
+}
+  
+.table tr:nth-child(even){
+    background-color: #e4e4e4;
+}
+  
+.table tr:hover {
+    background-color: #c5c5c5;
+}
+  
+.table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #212429;
+    color: white;
 }
 
 #errorPanel {
     padding-top: 30px;
     padding-bottom: 10px;
+}
+
+a
+{
+    color:#929292;
+}
+
+a:hover
+{
+    color:#929292;
 }
