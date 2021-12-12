@@ -46,11 +46,6 @@
     <description>service web d'hébergement et de gestion de développement de logiciels, utilisant le logiciel de gestion de versions Git</description>
   </item>
   <item>
-    <title>Unilim</title>
-    <link>https://biome.unilim.fr/</link>
-    <description>Site internet de l'Université de Limoges</description>
-  </item>
-  <item>
     <title>Leboncoin</title>
     <link>https://www.leboncoin.fr/</link>
     <description>Site web de petites annonces</description>
@@ -74,5 +69,10 @@
     <title>Duck Duck Go</title>
     <link>https://duckduckgo.com/</link>
     <description>Le moteur de recherche qui ne trace pas ses utilisateurs.</description>
+  </item>
+  <item>
+    <title>Campus Virtuel TIC</title>
+    <link>https://cvtic.unilim.fr/</link>
+    <description>Site internet du CvTIC.</description>
   </item>
 </channel>
