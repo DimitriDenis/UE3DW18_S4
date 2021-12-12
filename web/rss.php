@@ -40,69 +40,68 @@ if($app->connect_error){
 }
 echo 'Connexion réussie';
 
-$messagesParPage=5; //Nous allons afficher 5 messages par page.
+$liensParPage=5; //Nous affichons 5 liens par page.
 
 //Nous récupérons le contenu de la requête dans $result
 $sql = "SELECT COUNT(*) AS total FROM tl_liens";
 $result = mysqli_query($app, $sql);
 
-//On range retour sous la forme d'un tableau.
+
 $donnees_total=mysqli_fetch_assoc($result);
 
-//On récupère le total pour le placer dans la variable $total.
+
 $total=$donnees_total['total'];
 echo $total;
 
-$nombreDePages=ceil($total/$messagesParPage);
+$nombreDePages=ceil($total/$liensParPage);
 
 echo '<p>Il y a </p>'.$nombreDePages.'<p>pages </p> ';
 
-if(isset($_GET['page'])) // Si la variable $_GET['page'] existe...
+if(isset($_GET['page'])) // Si la variable $_GET['page'] existe
 {
      $pageActuelle=intval($_GET['page']);
  
-     if($pageActuelle>$nombreDePages) // Si la valeur de $pageActuelle (le numéro de la page) est plus grande que $nombreDePages...
+     if($pageActuelle>$nombreDePages) 
      {
           $pageActuelle=$nombreDePages;
           echo $pageActuelle;
      }
 }
-else // Sinon
+else 
 {
-     $pageActuelle=1; // La page actuelle est la n°1    
+     $pageActuelle=1;    
 }
 
-$premiereEntree=($pageActuelle-1)*$messagesParPage; // On calcul la première entrée à lire
+$premiereEntree=($pageActuelle-1)*$liensParPage; 
  
-// La requête sql pour récupérer les messages de la page actuelle.
+// La requête sql pour récupérer les liens de la page actuelle.
 $sql2 = "SELECT * FROM tl_liens ORDER BY id DESC LIMIT ";
-$retour_messages=mysqli_query($app, 'SELECT * FROM tl_liens ORDER BY lien_id DESC LIMIT '.$premiereEntree.', '.$messagesParPage.'');
+$retour_liens=mysqli_query($app, 'SELECT * FROM tl_liens ORDER BY lien_id DESC LIMIT '.$premiereEntree.', '.$liensParPage.'');
 
  
-while($donnees_messages=mysqli_fetch_assoc($retour_messages)) // On lit les entrées une à une grâce à une boucle
+while($donnees_liens=mysqli_fetch_assoc($retour_liens)) // On lit les entrées grâce à une boucle while
 {
-     //Je vais afficher les messages dans des petits tableaux. C'est à vous d'adapter pour votre design...
-     //De plus j'ajoute aussi un nl2br pour prendre en compte les sauts à la ligne dans le message.
+     
      echo '<table width="400" border="0" align="center" cellpadding="0" cellspacing="0">
                 <tr>
-                     <td><strong>Ecrit par : '.$donnees_messages['lien_url'].'</strong></td>
+                     <td><strong>Ecrit par : '.$donnees_liens['lien_url'].'</strong></td>
                 </tr>
                 <tr>
-                     <td>'.nl2br($donnees_messages['lien_titre']).'</td>
+                     <td>'.nl2br($donnees_liens['lien_titre']).'</td>
                 </tr>
             </table><br /><br />';
-    //J'ai rajouté des sauts à la ligne pour espacer les messages.   
+      
 }
 
-echo '<p align="center">Page : '; //Pour l'affichage, on centre la liste des pages
-for($i=1; $i<=$nombreDePages; $i++) //On fait notre boucle
+echo '<p align="center">Page : '; 
+for($i=1; $i<=$nombreDePages; $i++) 
 {
-     //On va faire notre condition
-     if($i==$pageActuelle) //S'il s'agit de la page actuelle...
+     
+     if($i==$pageActuelle) 
      {
          echo ' [ '.$i.' ] '; 
      }    
-     else //Sinon...
+     else 
      {
           echo ' <a href="rss.php?page='.$i.'">'.$i.'</a> ';
      }
